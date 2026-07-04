@@ -1,35 +1,556 @@
-# Portfolio Requirements - Sankalp Mahesh Pujari
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-## 1. Hero
-- Greeting: "Hi, I'm Sankalp Mahesh Pujari"
-- Typing Effect: B.Tech Computer Science student -> Aspiring Data Analyst -> Aspiring Data Scientist.
-- Hook: "Bridging the gap between robust software engineering and data-driven insights."
+<title>Sankalp Mahesh Pujari | Portfolio</title>
 
-## 2. About
-- Bio: CSE student at RIT, Sangli. Passionate about clean architecture and data intelligence.
-- Highlights: Sangli (Location), English/Marathi/Hindi (Languages), Data Analytics/Science/DBMS (Interests).
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-## 3. Education
-- B.Tech (CSE) at RIT Sangli - CPI: 8.40
-- HSC at Bhilawadi - 84%
-- SSC at Bhilawadi - 91.63%
+<style>
 
-## 4. Skills
-- C, Java, SQL (Core)
-- MySQL, VS Code, Jupyter
-- DBMS, Computer Networks, OS, DSA
-- Cert: LinkedIn Learning Relational Databases
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-## 5. Projects
-- Sphurti Electrical Shop: Full-stack tool availability platform (HTML/CSS/JS/PHP/MySQL).
-- Chatting Application: Real-time Java desktop app (Sockets/Multi-threading).
+body{
+background:#f4f7fb;
+color:#333;
+}
 
-## 6. Vision
-- Data Analytics/Science focus.
-- Quote: "Without big data, you are blind and deaf and in the middle of a freeway."
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:#0f172a;
+z-index:999;
+}
 
-## 7. Contact
-- +91 8459115952
-- sankalppujari25@gmail.com
-- LinkedIn: sankalp-pujari-b55056357
-- Location: Ankalkhop, Sangli, Maharashtra.
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+section{
+padding:90px 10%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:28px;
+color:#38bdf8;
+margin-bottom:20px;
+height:40px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 35px;
+background:#38bdf8;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0284c7;
+transform:scale(1.05);
+}
+
+.title{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+color:#1e3a8a;
+}
+
+.about{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.highlight{
+margin-top:20px;
+}
+
+.highlight p{
+margin:12px 0;
+}
+
+.education .edu-card{
+margin-bottom:25px;
+padding:25px;
+background:white;
+border-left:6px solid #2563eb;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.skill{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.skill:hover{
+transform:translateY(-8px);
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.project{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+}
+
+.project h3{
+margin-bottom:15px;
+color:#2563eb;
+}
+
+.vision{
+background:#1e293b;
+color:white;
+text-align:center;
+padding:80px 10%;
+}
+
+.vision h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.quote{
+font-size:25px;
+font-style:italic;
+margin-top:25px;
+color:#38bdf8;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact-card{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.contact p{
+margin:15px 0;
+font-size:18px;
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#vision">Vision</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Hi, I'm Sankalp Mahesh Pujari</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Bridging the gap between robust software engineering and data-driven insights.
+</p>
+
+<a href="#about" class="btn">Explore Portfolio</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<div class="card">
+
+<h3>Biography</h3>
+
+<br>
+
+<p>
+
+I am a passionate B.Tech Computer Science Engineering student at
+Rajarambapu Institute of Technology (RIT), Sangli.
+I enjoy solving real-world problems through software development,
+clean architecture, and data-driven intelligence.
+
+My long-term goal is to become a skilled Data Analyst and Data Scientist
+while continuously strengthening my programming and database expertise.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Highlights</h3>
+
+<div class="highlight">
+
+<p>📍 Sangli, Maharashtra</p>
+
+<p>🌐 English | Marathi | Hindi</p>
+
+<p>💡 Data Analytics</p>
+
+<p>📊 Data Science</p>
+
+<p>🗄 DBMS</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education" class="education">
+
+<h2 class="title">Education</h2>
+
+<div class="edu-card">
+
+<h3>B.Tech Computer Science Engineering</h3>
+
+<p>Rajarambapu Institute of Technology, Sangli</p>
+
+<p><b>CPI :</b> 8.40</p>
+
+</div>
+
+<div class="edu-card">
+
+<h3>Higher Secondary Certificate (HSC)</h3>
+
+<p>Bhilawadi</p>
+
+<p><b>84%</b></p>
+
+</div>
+
+<div class="edu-card">
+
+<h3>Secondary School Certificate (SSC)</h3>
+
+<p>Bhilawadi</p>
+
+<p><b>91.63%</b></p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill">
+
+<h3>Programming</h3>
+
+<p>C</p>
+
+<p>Java</p>
+
+<p>SQL</p>
+
+</div>
+
+<div class="skill">
+
+<h3>Tools</h3>
+
+<p>MySQL</p>
+
+<p>VS Code</p>
+
+<p>Jupyter Notebook</p>
+
+</div>
+
+<div class="skill">
+
+<h3>Core Subjects</h3>
+
+<p>DBMS</p>
+
+<p>Computer Networks</p>
+
+<p>Operating Systems</p>
+
+<p>DSA</p>
+
+</div>
+
+<div class="skill">
+
+<h3>Certification</h3>
+
+<p>LinkedIn Learning</p>
+
+<p>Relational Databases</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Sphurti Electrical Shop</h3>
+
+<p>
+
+Developed a full-stack web application that helps customers check
+tool availability online.
+
+</p>
+
+<br>
+
+<p>
+
+<b>Technology:</b>
+
+HTML, CSS, JavaScript, PHP, MySQL
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Chatting Application</h3>
+
+<p>
+
+Designed a real-time Java desktop chatting application
+using Socket Programming and Multi-threading.
+
+</p>
+
+<br>
+
+<p>
+
+<b>Technology:</b>
+
+Java, Swing, Socket Programming
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="vision" id="vision">
+
+<h2>Vision</h2>
+
+<p>
+
+My goal is to build impactful solutions through Data Analytics,
+Machine Learning, and Data Science while leveraging strong software
+engineering fundamentals.
+
+</p>
+
+<p class="quote">
+
+"Without big data, you are blind and deaf and in the middle of a freeway."
+
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact</h2>
+
+<div class="contact-card">
+
+<p>📞 +91 8459115952</p>
+
+<p>📧 sankalppujari25@gmail.com</p>
+
+<p>💼 LinkedIn: sankalp-pujari-b55056357</p>
+
+<p>📍 Ankalkhop, Sangli, Maharashtra</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sankalp Mahesh Pujari | All Rights Reserved
+
+</footer>
+
+<script>
+
+const text=[
+"B.Tech Computer Science Student",
+"Aspiring Data Analyst",
+"Aspiring Data Scientist"
+];
+
+let count=0;
+let index=0;
+let current="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+count=0;
+}
+
+current=text[count];
+letter=current.slice(0,++index);
+
+document.getElementById("typing").textContent=letter;
+
+if(letter.length===current.length){
+
+count++;
+index=0;
+
+setTimeout(type,1500);
+
+}else{
+
+setTimeout(type,100);
+
+}
+
+})();
+
+</script>
+
+</body>
+</html>
